@@ -1,0 +1,165 @@
+2023-03-30 12:52:37,394 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id:path>/messages     POST                           add_message
+/conversations/<conversation_id:path>/tracker/events POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id:path>/execute      POST                           execute_action
+/domain                                            GET                            get_domain
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id:path>/predict      POST                           predict
+/conversations/<conversation_id:path>/tracker/events PUT                            replace_events
+/conversations/<conversation_id:path>/story        GET                            retrieve_story
+/conversations/<conversation_id:path>/tracker      GET                            retrieve_tracker
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id:path>/trigger_intent POST                           trigger_intent
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2023-03-30 12:52:37,397 [INFO ]  Starting Rasa server on http://0.0.0.0:5005
+2023-03-30 12:52:37,398 [DEBUG]  Using the default number of Sanic workers (1).
+2023-03-30 12:52:37,448 [DEBUG]  Starting new HTTPS connection (1): api.segment.io:443
+2023-03-30 12:52:37,917 [DEBUG]  https://api.segment.io:443 "POST /v1/track HTTP/1.1" 200 21
+2023-03-30 12:52:38,009 [DEBUG]  Connected to InMemoryTrackerStore.
+2023-03-30 12:52:38,010 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2023-03-30 12:52:38,011 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2023-03-30 12:52:38,027 [INFO ]  Rasa server is up and running.
+2023-03-30 12:52:38,029 [INFO ]  Enabling coroutine debugging. Loop id 94886123008432.
+2023-04-04 12:22:02,515 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id:path>/messages     POST                           add_message
+/conversations/<conversation_id:path>/tracker/events POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id:path>/execute      POST                           execute_action
+/domain                                            GET                            get_domain
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id:path>/predict      POST                           predict
+/conversations/<conversation_id:path>/tracker/events PUT                            replace_events
+/conversations/<conversation_id:path>/story        GET                            retrieve_story
+/conversations/<conversation_id:path>/tracker      GET                            retrieve_tracker
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id:path>/trigger_intent POST                           trigger_intent
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2023-04-04 12:22:02,519 [INFO ]  Starting Rasa server on http://0.0.0.0:5005
+2023-04-04 12:22:02,520 [DEBUG]  Using the default number of Sanic workers (1).
+2023-04-04 12:22:02,563 [DEBUG]  Starting new HTTPS connection (1): api.segment.io:443
+2023-04-04 12:22:03,092 [DEBUG]  https://api.segment.io:443 "POST /v1/track HTTP/1.1" 200 21
+2023-04-04 12:22:03,187 [DEBUG]  Connected to InMemoryTrackerStore.
+2023-04-04 12:22:03,188 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2023-04-04 12:22:03,189 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2023-04-04 12:22:03,205 [INFO ]  Rasa server is up and running.
+2023-04-04 12:22:03,208 [INFO ]  Enabling coroutine debugging. Loop id 94472134002480.
+2023-04-04 12:28:44,523 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id:path>/messages     POST                           add_message
+/conversations/<conversation_id:path>/tracker/events POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id:path>/execute      POST                           execute_action
+/domain                                            GET                            get_domain
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id:path>/predict      POST                           predict
+/conversations/<conversation_id:path>/tracker/events PUT                            replace_events
+/conversations/<conversation_id:path>/story        GET                            retrieve_story
+/conversations/<conversation_id:path>/tracker      GET                            retrieve_tracker
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id:path>/trigger_intent POST                           trigger_intent
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2023-04-04 12:28:44,526 [INFO ]  Starting Rasa server on http://0.0.0.0:5005
+2023-04-04 12:28:44,527 [DEBUG]  Using the default number of Sanic workers (1).
+2023-04-04 12:28:44,574 [DEBUG]  Starting new HTTPS connection (1): api.segment.io:443
+2023-04-04 12:28:45,424 [DEBUG]  https://api.segment.io:443 "POST /v1/track HTTP/1.1" 200 21
+2023-04-04 12:28:45,491 [DEBUG]  Connected to InMemoryTrackerStore.
+2023-04-04 12:28:45,493 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2023-04-04 12:28:45,494 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2023-04-04 12:28:45,505 [INFO ]  Rasa server is up and running.
+2023-04-04 12:28:45,507 [INFO ]  Enabling coroutine debugging. Loop id 94250711594192.
+2023-04-04 12:29:06,061 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id:path>/messages     POST                           add_message
+/conversations/<conversation_id:path>/tracker/events POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id:path>/execute      POST                           execute_action
+/domain                                            GET                            get_domain
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id:path>/predict      POST                           predict
+/conversations/<conversation_id:path>/tracker/events PUT                            replace_events
+/conversations/<conversation_id:path>/story        GET                            retrieve_story
+/conversations/<conversation_id:path>/tracker      GET                            retrieve_tracker
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id:path>/trigger_intent POST                           trigger_intent
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2023-04-04 12:29:06,063 [INFO ]  Starting Rasa server on http://0.0.0.0:5005
+2023-04-04 12:29:06,064 [DEBUG]  Using the default number of Sanic workers (1).
+2023-04-04 12:29:06,101 [DEBUG]  Starting new HTTPS connection (1): api.segment.io:443
+2023-04-04 12:29:07,236 [DEBUG]  https://api.segment.io:443 "POST /v1/track HTTP/1.1" 200 21
+2023-04-04 12:29:07,303 [DEBUG]  Connected to InMemoryTrackerStore.
+2023-04-04 12:29:07,304 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2023-04-04 12:29:07,305 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2023-04-04 12:29:07,315 [INFO ]  Rasa server is up and running.
+2023-04-04 12:29:07,320 [INFO ]  Enabling coroutine debugging. Loop id 94391192842080.
+2023-04-04 12:43:14,063 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id:path>/messages     POST                           add_message
+/conversations/<conversation_id:path>/tracker/events POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id:path>/execute      POST                           execute_action
+/domain                                            GET                            get_domain
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id:path>/predict      POST                           predict
+/conversations/<conversation_id:path>/tracker/events PUT                            replace_events
+/conversations/<conversation_id:path>/story        GET                            retrieve_story
+/conversations/<conversation_id:path>/tracker      GET                            retrieve_tracker
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id:path>/trigger_intent POST                           trigger_intent
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2023-04-04 12:43:14,067 [INFO ]  Starting Rasa server on http://0.0.0.0:5005
+2023-04-04 12:43:14,068 [DEBUG]  Using the default number of Sanic workers (1).
+2023-04-04 12:43:14,110 [DEBUG]  Starting new HTTPS connection (1): api.segment.io:443
+2023-04-04 12:43:14,745 [DEBUG]  https://api.segment.io:443 "POST /v1/track HTTP/1.1" 200 21
+2023-04-04 12:43:14,802 [DEBUG]  Connected to InMemoryTrackerStore.
+2023-04-04 12:43:14,803 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2023-04-04 12:43:14,804 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2023-04-04 12:43:14,815 [INFO ]  Rasa server is up and running.
+2023-04-04 12:43:14,818 [INFO ]  Enabling coroutine debugging. Loop id 94401126868912.
