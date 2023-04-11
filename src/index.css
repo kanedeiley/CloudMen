@@ -11,3 +11,45 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.text{
+  width:70%;
+  height:100%;
+}
+.submit{
+  width:20%;
+  height:120%;
+}
+.form{
+  display: block;
+  width:90%;
+  height:5%;
+  position: absolute;
+  bottom:5vh;
+  left:5vw
+}
+.chatbot-messages {
+  position: absolute;
+  top:5vh;
+  left:6vw;
+  width:80%;
+}
+
+.message {
+  display:block;
+  border: 1px solid white;
+  padding-bottom: 3vh;
+  padding-top: 3vh;
+  border-radius:5px;
+  margin-bottom: 1vh;
+  padding-left: 5vw;
+}
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
