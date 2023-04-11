@@ -29,9 +29,11 @@ code {
 }
 .chatbot-messages {
   position: absolute;
-  top:5vh;
-  left:6vw;
-  width:80%;
+  top: 5vh;
+  left: 6vw;
+  width: 90%;
+  height: 85%;
+  overflow-y: scroll;
 }
 
 .message {
