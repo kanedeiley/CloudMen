@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './index.css';
+let response = "test";
 
 function App() {
   const [messages, setMessages] = useState([]);
@@ -10,7 +11,7 @@ function App() {
     if (input.toLowerCase() === "/clear") {
       setMessages([]);
     } else {
-      setMessages([...messages, input]);
+      setMessages([...messages, input, response]);
     }
     event.target.elements.message.value = '';
   };
@@ -18,6 +19,10 @@ function App() {
   return (
     <div className="App">
       <header class="App-header">
+        <section class="logo">
+          <img src='logo.png' alt="logo"></img>
+          <h1>Ram Bot</h1>
+        </section>
         <div class="chatbot-container">
           <div class="chatbot-messages">
             {messages.map((message, index) => (
@@ -27,12 +32,12 @@ function App() {
             ))}
           </div>
           <form class="form" onSubmit={handleSubmit}>
-          <input class="text" type="text" name="message" placeholder="Enter your question about a WCU class or Professor. Enter &quot;/clear&quot; to clear the chat."></input>
-          <input type="submit" class="submit" value="Send"></input>
+            <input class="text" type="text" name="message" placeholder="Enter your question about a WCU class or Professor. Enter &quot;/clear&quot; to clear the chat."></input>
+            <input type="submit" class="submit" value="Send"></input>
           </form>
         </div>
       </header>
-    </div>
+    </div> 
   );
 }
 
