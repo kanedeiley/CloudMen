@@ -44,7 +44,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-        name: mydb
+        name: mysql
 spec:
         replicas: 1
         selector:
@@ -55,7 +55,7 @@ spec:
         template:
                 metadata:
                         labels:
-                                app: mydb
+                                app: mysql
                 spec:
                         containers:
                                 - image: mysql:latest
