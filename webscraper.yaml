@@ -10,7 +10,7 @@ spec:
                 spec:
                         containers:
                                 - name: webscraper
-                                  image: dm929389/selenium:latest
+                                  image: dm929389/python:3
                                   ports:
                                           - containerPort: 5000
                         restartPolicy: OnFailure
