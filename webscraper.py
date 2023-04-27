@@ -4,20 +4,31 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
+import pymysql
 
-#Set the path to the uBlock Origin extension file
-extension_path = "C:/Users/danie/Downloads/gighmmpiobklfepjocnamgkkbiglidom"
-
-# Create a new instance of the Chrome driver with uBlock Origin extension
+# Create a new instance of the Chrome driver with ad blocker extension
 options = webdriver.ChromeOptions()
-options.add_extension(extension_path)
 options.add_argument("--disable-notifications")
+ad_blocker_path = "C:/Users/danie/AppData/Local/Google/Chrome/User Data/Profile 1/Extensions/bgnkhhnnamicmpeenaelnjfhikgbkllg/4.1.55_0.crx"
+options.add_extension(ad_blocker_path)
 driver = webdriver.Chrome(options=options)
 
 # Load the search results page
 driver.get("https://www.ratemyprofessors.com/search/teachers?query=*&sid=1162")
 
-# Click the "Close" button of the overlay if it exists
+# Get the ID of the ratemyprofessor page
+target_tab_id = driver.current_window_handle
+
+# Close all tabs other than the ratemyprofessor page
+for tab_id in driver.window_handles:
+    if tab_id != target_tab_id:
+        driver.switch_to.window(tab_id)
+        driver.close()
+
+# Switch back to the ratemyprofessor page
+driver.switch_to.window(target_tab_id)
+
+# Close any overlays or iframes that may appear
 try:
     close_button = driver.find_element(By.CSS_SELECTOR, "button.CCPAModal__StyledCloseButton-sc-10x9kq-2.gvGrz")
     close_button.click()
@@ -25,24 +36,24 @@ try:
 except:
     pass
 
+# Scroll to the bottom of the page to load all professors
+while True:
+    prev_height = driver.execute_script("return document.body.scrollHeight")
+    driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+    time.sleep(1)
+    new_height = driver.execute_script("return document.body.scrollHeight")
+    if new_height == prev_height:
+        break
+
 # Click the "Show More" button multiple times until it is no longer visible
 while True:
     try:
-        # Close any pop-up ads
-        for window_handle in driver.window_handles:
-            driver.switch_to.window(window_handle)
-            if "pop-up ad" in driver.title.lower():
-                driver.close()
-        
         show_more_button = driver.find_element(By.CSS_SELECTOR, "button.PaginationButton__StyledPaginationButton-txi1dr-1.gjQZal")
         if show_more_button.is_displayed():
-            try:
-                show_more_button.click()
-                time.sleep(1)
-            except:
-                WebDriverWait(driver, 10).until(EC.invisibility_of_element_located((By.CSS_SELECTOR, ".ReactModal__Overlay")))
-                show_more_button.click()
-                time.sleep(1)
+            driver.execute_script("arguments[0].scrollIntoView();", show_more_button)
+            time.sleep(1)
+            show_more_button.click()
+            time.sleep(1)
         else:
             break
     except:
@@ -55,5 +66,100 @@ html_code = driver.page_source
 # Close the driver
 driver.quit()
 
-# Print the HTML code
-print(html_code)
+import requests
+from bs4 import BeautifulSoup
+import pandas as pd
+import json
+
+soup = BeautifulSoup(html_code, "html.parser")
+teachers = soup.find_all('a', {'class': 'TeacherCard__StyledTeacherCard-syjs0d-0 dLJIlx'})
+teachers_data = []
+
+for teacher in teachers:
+    tdept = teacher.find('div', {'class': 'CardSchool__Department-sc-19lmz2k-0 haUIRO'})
+    Stdept = tdept.text.strip()
+    institution_name = teacher.find('div', {'class': 'CardSchool__School-sc-19lmz2k-1 iDlVGM'})
+    Sinstitution_name = institution_name.text.strip()
+    tname = teacher.find('div', {'class': 'CardName__StyledCardName-sc-1gyrgim-0 cJdVEK'})
+    Stname = tname.text.strip()
+    tNumRatings = teacher.find('div', {'class': 'CardNumRating__CardNumRatingCount-sc-17t4b9u-3 jMRwbg'})
+    StNumRatings = tNumRatings.text.strip()
+    quality = teacher.find('div', {'class': 'CardNumRating__CardNumRatingNumber-sc-17t4b9u-2 icXUyq'})
+    qualityTwo = teacher.find('div', {'class': 'CardNumRating__CardNumRatingNumber-sc-17t4b9u-2 bUneqk'})
+    qualityThree = teacher.find('div', {'class': 'CardNumRating__CardNumRatingNumber-sc-17t4b9u-2 gcFhmN'})
+    if quality is not None and quality.text.strip():
+        Squality = quality.text.strip()
+    elif qualityTwo is not None and qualityTwo.text.strip():
+        Squality = qualityTwo.text.strip()
+    elif qualityThree is not None and qualityThree.text.strip():
+        Squality = qualityThree.text.strip()
+    else:
+        Squality = 0
+    lad = teacher.find('div', {'class': 'CardFeedback__StyledCardFeedback-lq6nix-0 frciyA'}).find_all('div', {'class': 'CardFeedback__CardFeedbackNumber-lq6nix-2 hroXqf'})
+    wta = lad[0].text.strip()
+    difficulty = lad[1].text.strip()
+
+    teachers_data.append({
+        "tdept": Stdept,
+        "institutiion_name": Sinstitution_name,
+        "tname": Stname,
+        "tNumRatings": StNumRatings,
+        "Quality": Squality,
+        "Difficulty": difficulty,
+        "would take again" : wta
+    })
+
+df = pd.DataFrame.from_dict(teachers_data)
+
+import mysql.connector
+
+# Create a connection to the MySQL database
+cnx = mysql.connector.connect(user='your_username', password='your_password',
+                              host='your_host', database='your_database')
+
+# Create a cursor object
+cursor = cnx.cursor()
+
+# Define the SQL query to create a table
+create_table_query = '''
+CREATE TABLE teachers (
+  id INT NOT NULL AUTO_INCREMENT,
+  tdept VARCHAR(255),
+  institution_name VARCHAR(255),
+  tname VARCHAR(255),
+  tNumRatings INT,
+  Quality FLOAT,
+  Difficulty FLOAT,
+  would_take_again FLOAT,
+  PRIMARY KEY (id)
+)
+'''
+
+# Execute the query to create the table
+cursor.execute(create_table_query)
+
+# Export the DataFrame to the MySQL table
+for _, row in df.iterrows():
+    add_teacher_query = '''
+    INSERT INTO teachers (tdept, institution_name, tname, tNumRatings, Quality, Difficulty, would_take_again)
+    VALUES (%s, %s, %s, %s, %s, %s, %s)
+    '''
+    data = (row['tdept'], row['institutiion_name'], row['tname'], row['tNumRatings'], row['Quality'], row['Difficulty'], row['would take again'])
+    cursor.execute(add_teacher_query, data)
+
+# Commit the changes to the database
+cnx.commit()
+
+# Close the connection and cursor objects
+cursor.close()
+cnx.close()
+
+conn = pymysql.connect(
+    host='your-hostname',
+    port=your-port-number,
+    user='your-username',
+    password='your-password',
+    db='your-database-name',
+    charset='utf8mb4')
+
+data.to_sql(name='df', con=conn, if_exists='replace', index=False)
