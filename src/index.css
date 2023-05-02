@@ -6,13 +6,16 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+*, ::after, ::before{
+  background-color: #66369d;
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 .text{          /* this is the text box at the bottom next to the send */      
-  width: 89%;
+  width: 100%;
   height:85%;
   font-size: 1em; /* adjust font size as needed */
   background-color: #cdc7d9;
@@ -20,28 +23,23 @@ code {
   
 }
 
-.submit{
-  width:10%;
-  height:95%;
-  font-size: 1em; /* adjust font size as needed */
-  background-color: #cdc7d9;
-  border-color: black;
-  
-}
 .form{
   display: inline-block;
   width:90%;
-  height:5%;
+  height:5vh;
   position: absolute;
   bottom:5vh;
   left:5vw
 }
 .chatbot-messages {
   position: absolute;
-  top: 17vh;
+  display:block;
+  top: 23vh;
   left: 6vw;
   width: 94%;
-  height: 70%;
+  height:62vh;
+  margin-bottom: 10vh;
+  margin-top: 5vh;
   overflow-y: auto;
 }
 
@@ -69,7 +67,7 @@ code {
 .logo{
   display: inline-flex;
   width:300px;
-  height:150px;
+  height:23vh;
   position:absolute;
   top:3vh;
 }

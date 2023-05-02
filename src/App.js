@@ -1,21 +1,23 @@
 import React, { useState } from 'react';
 import './index.css';
-let response = "test";
+import response from './response.json';
 
 function App() {
   const [messages, setMessages] = useState([]);
 
-  const handleSubmit = (event) => {                 /* to clear the chat type /clear*/
+  const handleSubmit = (event) => {
     event.preventDefault();
-    const input = event.target.elements.message.value;
-    if (input.toLowerCase() === "/clear") {
+    const input = event.target.elements.message.value.trim();
+  
+    if (input === "/clear") {
       setMessages([]);
     } else {
-      setMessages([...messages, input, response]);
+      const chatbotResponse = response[input] || "I don't understand. Please try again.";
+      setMessages([...messages, `[User]: ${input}`, `[Bot]: ${chatbotResponse}`]);
     }
     event.target.elements.message.value = '';
   };
-
+  
   return (
     <div className="App">
       <header class="App-header">
@@ -33,7 +35,7 @@ function App() {
           </div>
           <form class="form" onSubmit={handleSubmit}>
             <input class="text" type="text" name="message" placeholder="Enter your question about a WCU class or Professor. Enter &quot;/clear&quot; to clear the chat."></input>
-            <input type="submit" class="submit" value="Send"></input>
+            <input type="submit" class="submit" value="Send" hidden></input>
           </form>
         </div>
       </header>
