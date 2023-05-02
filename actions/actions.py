@@ -15,3 +15,27 @@
          dispatcher.utter_message(text="Hello World!")
 
          return []
+         
+class action_teacherName_search(Action):
+     def name(self) -> Text:
+         return "action_hello_world"
+
+     def run(self, dispatcher: CollectingDispatcher,
+             tracker: Tracker,
+             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+         dispatcher.utter_message(text="teacher Name!")
+
+         return []
+         
+class action_teacher_query(Action):
+     def name(self) -> Text:
+         return "action_hello_world"
+
+     def run(self, dispatcher: CollectingDispatcher,
+             tracker: Tracker,
+             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+         dispatcher.utter_message(text="teacher!")
+
+         return []
