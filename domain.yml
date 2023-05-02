@@ -28,6 +28,9 @@ responses:
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
+actions:
+  - action_teacherName_search
+  - action_teacher_query
 
 session_config:
   session_expiration_time: 60
