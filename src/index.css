@@ -53,6 +53,7 @@ code {
   margin-bottom: 1vh;
   padding-left: 5vw;
   margin-right:5vw;
+  overflow-wrap: break-word;
 }
 .App-header {
   background-color: #66369d;
