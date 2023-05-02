@@ -19,8 +19,8 @@ code {
   height:85%;
   font-size: 1em; /* adjust font size as needed */
   background-color: #cdc7d9;
-  border-color: black;
-  
+  border-color: transparent;
+  border-radius: 5px;
 }
 
 .form{
