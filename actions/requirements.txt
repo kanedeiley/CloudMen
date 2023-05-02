@@ -4,3 +4,5 @@ spacy
 rasa-nlu   
 rasa-core   
 rasa-core-sdk  
+mysql-connector-python
+sqlalchemy 
