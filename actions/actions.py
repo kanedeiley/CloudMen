@@ -2,7 +2,7 @@
 
  from rasa_sdk import Action, Tracker
  from rasa_sdk.executor import CollectingDispatcher
-
+ import mysql.connector
 
  class ActionHelloWorld(Action):
      def name(self) -> Text:
