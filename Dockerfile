@@ -1,4 +1,4 @@
-FROM python:3
+FROM python:latest
 
 RUN apt-get update && \
     apt-get install -y wget gnupg2 curl unzip && \
@@ -15,4 +15,4 @@ RUN wget -q "https://chromedriver.storage.googleapis.com/$(curl https://chromedr
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-CMD ["python", "mwebscraper.py", "mydb:"]
+CMD ["python", "mwebscraper.py", "mydb:3306"]
