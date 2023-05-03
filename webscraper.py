@@ -114,8 +114,8 @@ df = pd.DataFrame.from_dict(teachers_data)
 import mysql.connector
 
 # Create a connection to the MySQL database
-cnx = mysql.connector.connect(user='your_username', password='your_password',
-                              host='your_host', database='your_database')
+cnx = mysql.connector.connect(user='root', password='basicPassword',
+                              host='mysqldb', database='profs')
 
 # Create a cursor object
 cursor = cnx.cursor()
@@ -155,11 +155,11 @@ cursor.close()
 cnx.close()
 
 conn = pymysql.connect(
-    host='your-hostname',
-    port=your-port-number,
-    user='your-username',
-    password='your-password',
-    db='your-database-name',
+    host='root',
+    port=3306,
+    user='mysqldb',
+    password='basicPassword',
+    db='profs',
     charset='utf8mb4')
 
-data.to_sql(name='df', con=conn, if_exists='replace', index=False)
+data.to_sql(name='profs', con=conn, if_exists='replace', index=False)
