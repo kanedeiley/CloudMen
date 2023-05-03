@@ -15,4 +15,4 @@ RUN wget -q "https://chromedriver.storage.googleapis.com/$(curl https://chromedr
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-CMD ["python", "my_webscraper.py", "mydb:"]
+CMD ["python", "mwebscraper.py", "mydb:"]
