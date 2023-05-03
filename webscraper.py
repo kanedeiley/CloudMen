@@ -9,7 +9,7 @@ import pymysql
 # Create a new instance of the Chrome driver with ad blocker extension
 options = webdriver.ChromeOptions()
 options.add_argument("--disable-notifications")
-ad_blocker_path = "C:/Users/danie/AppData/Local/Google/Chrome/User Data/Profile 1/Extensions/bgnkhhnnamicmpeenaelnjfhikgbkllg/4.1.55_0.crx"
+ad_blocker_path = "4.1.55_0.crx"
 options.add_extension(ad_blocker_path)
 driver = webdriver.Chrome(options=options)
 
