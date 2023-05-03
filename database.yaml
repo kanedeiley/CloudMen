@@ -44,22 +44,22 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-        name: mysql
+        name: mysqldb
 spec:
         replicas: 1
         selector:
                 matchLabels:
-                        app: mysql
+                        app: mysqldb
         strategy:
                 type: Recreate
         template:
                 metadata:
                         labels:
-                                app: mysql
+                                app: mysqldb
                 spec:
                         containers:
                                 - image: mysql:latest
-                                  name: mydb
+                                  name: mysqldb
                                   env:
                                           - name: MYSQL_ROOT_PASSWORD
                                             valueFrom: 
