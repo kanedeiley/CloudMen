@@ -1,0 +1,53 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+        name: webscraper
+spec:
+        template:
+                metadata:
+                        labels:
+                                app: webscraper
+                spec:
+                        containers:
+                                - name: webscraper
+                                  image: dm929389/python:latest
+                                  ports:
+                                          - containerPort: 5000
+                        restartPolicy: OnFailure
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+        name: mysqldb
+spec:
+        replicas: 1
+        selector:
+                matchLabels:
+                        app: mysqldb
+        strategy:
+                type: Recreate
+        template:
+                metadata:
+                        labels:
+                                app: mysqldb
+                spec:
+                        containers:
+                                - image: mysql:latest
+                                  name: mysqldb
+                                  env:
+                                          - name: MYSQL_ROOT_PASSWORD
+                                            valueFrom:
+                                                secretKeyRef:
+                                                    name: mysql-secret
+                                                    key: password
+                                          - name: MYSQL_DATABASE
+                                            value: profs
+                                  ports:
+                                          - containerPort: 3306
+                                  volumeMounts:
+                                          - name: mysql-persistent-storage
+                                            mountPath: /var/lib/mysql
+                        volumes:
+                                - name: mysql-persistent-storage
+                                  persistentVolumeClaim:
+                                          claimName: mysql-pvc
