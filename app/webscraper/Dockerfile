@@ -12,7 +12,10 @@ RUN wget -q "https://chromedriver.storage.googleapis.com/$(curl https://chromedr
     rm /tmp/chromedriver.zip && \
     chmod +x /usr/local/bin/chromedriver
 
-COPY requirements.txt .
+COPY requirements.txt wait-for-it.sh /
+
 RUN pip install --no-cache-dir -r requirements.txt
+
+COPY WebScraper.py /
 
 CMD ["python", "webscraper.py", "mysqldb:3306"]
