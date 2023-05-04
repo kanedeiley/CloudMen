@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+#webscraper
+        webscraper:
+                build: webscraper
+                image: dm929389/python:latest
+                ports:
+                        - "8000:5000"
+#database
+        mysqldb:
+                restart: always
+                container_name: mysqldb
+                image: mysql
+                environment:
+                        MYSQL_ROOT_PASSWORD: basicPassword
+                        MYSQL_ROOT_HOST: '%'
+                        MYSQL_DATABASE: profs
+                ports:
+                        - "3308:3306"
+                volumes:
+                        - mysql:/var/lib/mysql
+                        - mysql_config:/etc/mysql
+volumes:
+        mysql:
+        mysql_config:
