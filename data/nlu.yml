@@ -90,10 +90,30 @@ nlu:
     - am I talking to a bot?
     - am I talking to a human?
 
+- intent: tdept
+  examples: |
+    -  is [matt stone] (teacherName) a part of the [computer science] (tdept) department?
+
 - intent: teacherName
   examples: |
     - is [matt stone] (teacherName) a teacher?
 
-- intent: teacherName_questions
+- intent: InstitutionName
   examples: |
-    - what classes does [matt stone] (teacherName) teach
+    - is [west Chester] (InstitutionName) a university? 
+
+- intent: tNumRatings
+  examples: |
+    - how many people have rated [matt stone] (teacherName)
+
+- intent: Quality
+  examples: |
+    - what is the overall quality of  [matt stones] (teacherName) classes?
+
+- intent: Difficulty
+  examples: |
+    - what is the overall Difficulty of  [matt stones] (teacherName) classes?
+
+- intent: WTA
+  examples: |
+    - what is the WTA of  [matt stones] (teacherName) classes?
