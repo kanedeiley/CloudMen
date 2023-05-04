@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+        name: webscraper
+spec:
+        ports:
+                - port: 5000
+                  protocol: TCP
+---
+apiVersion: v1
+kind: Service
+metadata:
+        name: mysqldb
+spec:
+        ports:
+                - port: 3306
+                  protocol: TCP
+        selector:
+                app: mysqldb
