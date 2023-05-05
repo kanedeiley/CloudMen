@@ -90,9 +90,9 @@ cursor.close()
 cnx.close()
 
 conn = pymysql.connect(
-    host='root',
+    host='mysqldb',
     port=3306,
-    user='mysqldb',
+    user='root',
     password='basicPassword',
     db='profs',
     charset='utf8mb4')
