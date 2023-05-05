@@ -1,77 +1,9 @@
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-import time
-import pymysql
-
-# Create a new instance of the Chrome driver with ad blocker extension
-options = webdriver.ChromeOptions()
-options.add_argument("--disable-notifications")
-ad_blocker_path = "4.1.55_0.crx"
-options.add_extension(ad_blocker_path)
-driver = webdriver.Chrome(options=options)
-
-# Load the search results page
-driver.get("https://www.ratemyprofessors.com/search/teachers?query=*&sid=1162")
-
-# Get the ID of the ratemyprofessor page
-target_tab_id = driver.current_window_handle
-
-# Close all tabs other than the ratemyprofessor page
-for tab_id in driver.window_handles:
-    if tab_id != target_tab_id:
-        driver.switch_to.window(tab_id)
-        driver.close()
-
-# Switch back to the ratemyprofessor page
-driver.switch_to.window(target_tab_id)
-
-# Close any overlays or iframes that may appear
-try:
-    close_button = driver.find_element(By.CSS_SELECTOR, "button.CCPAModal__StyledCloseButton-sc-10x9kq-2.gvGrz")
-    close_button.click()
-    time.sleep(1)
-except:
-    pass
-
-# Scroll to the bottom of the page to load all professors
-while True:
-    prev_height = driver.execute_script("return document.body.scrollHeight")
-    driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-    time.sleep(1)
-    new_height = driver.execute_script("return document.body.scrollHeight")
-    if new_height == prev_height:
-        break
-
-# Click the "Show More" button multiple times until it is no longer visible
-while True:
-    try:
-        show_more_button = driver.find_element(By.CSS_SELECTOR, "button.PaginationButton__StyledPaginationButton-txi1dr-1.gjQZal")
-        if show_more_button.is_displayed():
-            driver.execute_script("arguments[0].scrollIntoView();", show_more_button)
-            time.sleep(1)
-            show_more_button.click()
-            time.sleep(1)
-        else:
-            break
-    except:
-        # Handle any exceptions that may occur during the loop, such as element not found errors
-        pass
-
-# Get the complete HTML code of the page
-html_code = driver.page_source
-
-# Close the driver
-driver.quit()
-
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 import json
 
-soup = BeautifulSoup(html_code, "html.parser")
+soup = BeautifulSoup(html_code.html, "html.parser")
 teachers = soup.find_all('a', {'class': 'TeacherCard__StyledTeacherCard-syjs0d-0 dLJIlx'})
 teachers_data = []
 
