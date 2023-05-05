@@ -7,4 +7,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY webscraper.py /
 
-CMD ["python", "webscraper.py", "mysqldb:3306"]
+CMD ["python", "webscraper.py"]
