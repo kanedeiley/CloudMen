@@ -7,6 +7,9 @@ soup = BeautifulSoup(html_code.html, "html.parser")
 teachers = soup.find_all('a', {'class': 'TeacherCard__StyledTeacherCard-syjs0d-0 dLJIlx'})
 teachers_data = []
 
+with open('..\html_code.html', 'r') as file:
+    html_code = file.read()
+
 for teacher in teachers:
     tdept = teacher.find('div', {'class': 'CardSchool__Department-sc-19lmz2k-0 haUIRO'})
     Stdept = tdept.text.strip()
@@ -87,9 +90,9 @@ cursor.close()
 cnx.close()
 
 conn = pymysql.connect(
-    host='root',
+    host='mysqldb',
     port=3306,
-    user='mysqldb',
+    user='root',
     password='basicPassword',
     db='profs',
     charset='utf8mb4')
