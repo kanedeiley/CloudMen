@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import pandas as pd
 import json
 
-with open('..\webscraper\html_code.html', 'r') as file:
+with open('/html_code.html', 'r') as file:
     html_code = file.read()
 
 soup = BeautifulSoup(html_code, "html.parser")
@@ -48,9 +48,16 @@ df = pd.DataFrame.from_dict(teachers_data)
 
 import mysql.connector
 
+config = {
+    'user': 'root',
+    'password': 'basicPassword',
+    'host': 'mysqldb',
+    'port': 3306,
+    'database': 'profs'
+}
+
 # Create a connection to the MySQL database
-cnx = mysql.connector.connect(user='root', password='basicPassword',
-                              host='mysqldb', database='profs')
+cnx = mysql.connector.connect(**config)
 
 # Create a cursor object
 cursor = cnx.cursor()
@@ -88,13 +95,3 @@ cnx.commit()
 # Close the connection and cursor objects
 cursor.close()
 cnx.close()
-
-conn = pymysql.connect(
-    host='mysqldb',
-    port=3306,
-    user='root',
-    password='basicPassword',
-    db='profs',
-    charset='utf8mb4')
-
-data.to_sql(name='profs', con=conn, if_exists='replace', index=False)
