@@ -3,7 +3,10 @@ from bs4 import BeautifulSoup
 import pandas as pd
 import json
 
-soup = BeautifulSoup(html_code.html, "html.parser")
+with open('..\webscraper\html_code.html', 'r') as file:
+    html_code = file.read()
+
+soup = BeautifulSoup(html_code, "html.parser")
 teachers = soup.find_all('a', {'class': 'TeacherCard__StyledTeacherCard-syjs0d-0 dLJIlx'})
 teachers_data = []
 
