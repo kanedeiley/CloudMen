@@ -90,51 +90,64 @@ nlu:
     - am I talking to a bot?
     - am I talking to a human?
 
-- intent: teacher_department 
+- intent: query_knowledge_base
   examples: |
-    - is [Si Chen](teacherName) a part of the [computer science] (tdept) department?
-    - What department is [Matt Stone](teacherName) affiliated with?
-    - Which department does [Mike Jones](teacherName) teach in?
-    - In which department is [Jonh Smith](teacherName) currently teaching?
-    - Which subject area or department does [Linh Ngo](teacherName) specialize in?
-    - Can you let me know the department [Aliice Cooper](teacherName) is a part of?
+    - what [teacher]{"entity": "object_type", "value": "teacher"} can you recommend?
+    - list some [teachers]{"entity": "object_type", "value": "teacher"}
+    - can you name some [teacher]{"entity": "object_type", "value": "teacher"} please?
+    - can you show me some [teacher]{"entity": "object_type", "value": "teacher"} options
+    - What [department](tdept) is [Matt Stone](Stname) affiliated with?
+    - do you have any [cs](tdept) [teachers]{"entity": "object_type", "value": "teacher"}?
+    - How many [ratings](tNumRatings) has [Aliice Cooper](Stname) received so far?\
+    - what is the overall [quality](Quality) of [matt stones] (Stname) classes?
+    - what is the overall [Difficulty](Difficulty) of [matt stones] (Stname) classes?
+    - what is the overall [WTA](WTA) of [matt stones] (Stname) classes?
 
-- intent: teacher_Name
-  examples: |
-    - is [matt stone] (teacherName) a teacher?
-    - is [Linh Ngo](teacherName) at west chester university?
-    - May I know if [Aliice Cooper](teacherName) is a techer?
-    - Could you please tell me if [Si Chen](teacherName) is a techer?
-    - Excuse me, but  is [Jonh Smith](teacherName) a techer?
+#- intent: teacher_department 
+#  examples: |
+#    - is [Si Chen](teacherName) a part of the [computer science] (tdept) department?
+#    - What department is [Matt Stone](teacherName) affiliated with?
+#    - Which department does [Mike Jones](teacherName) teach in?
+#    - In which department is [Jonh Smith](teacherName) currently teaching?
+#    - Which subject area or department does [Linh Ngo](teacherName) specialize in?
+#    - Can you let me know the department [Aliice Cooper](teacherName) is a part of?
 
-- intent: Institution_Name
-  examples: |
-    - Which university is [matt stone] (teacherName) currently teaching at?
-    - May I know the name of the university where [Si Chen](teacherName) teach?
-    - What is the name of the institution where [Mike Jones](teacherName) is employed as a teacher?
-    - Could you tell me the name of the university where [Jonh Smith](teacherName) holds a teaching position?
-    - Which university is [Aliice Cooper](teacherName) affiliated with as a faculty member? 
+#- intent: teacher_Name
+#  examples: |
+#    - is [matt stone] (teacherName) a teacher?
+#    - is [Linh Ngo](teacherName) at west chester university?
+#    - May I know if [Aliice Cooper](teacherName) is a techer?
+#    - Could you please tell me if [Si Chen](teacherName) is a techer?
+#    - Excuse me, but  is [Jonh Smith](teacherName) a techer?
 
-- intent: teacher_Number_of_Ratings
-  examples: |
-    - how many people have rated [matt stone] (teacherName)
-    - How many individuals have provided feedback on [Si Chen](teacherName)?
-    - Can you tell me the number of people who have rated [Jonh Smith](teacherName)?
-    - How many ratings has [Aliice Cooper](teacherName) received so far?
-    - What is the total count of individuals who have given their feedback for [Mike Jones] (teacherName)?
-    - Could you please inform me how many people have rated [matt stone] (teacherName)?
+#- intent: institution_Name
+#  examples: |
+#    - Which university is [matt stone] (teacherName) currently teaching at?
+#    - May I know the name of the university where [Si Chen](teacherName) teach?
+#    - What is the name of the institution where [Mike Jones](teacherName) is employed as a teacher?
+#    - Could you tell me the name of the university where [Jonh Smith](teacherName) holds a teaching position?
+#    - Which university is [Aliice Cooper](teacherName) affiliated with as a faculty member? 
 
-- intent: Quality
-  examples: |
-    - what is the overall quality of  [matt stones] (teacherName) classes?
-    - what is the quality of [Si Chen] (teacherName) classes?
+#- intent: teacher_Number_of_Ratings
+#  examples: |
+#    - how many people have rated [matt stone] (teacherName)
+#    - How many individuals have provided feedback on [Si Chen](teacherName)?
+#    - Can you tell me the number of people who have rated [Jonh Smith](teacherName)?
+#    - How many ratings has [Aliice Cooper](teacherName) received so far?
+#    - What is the total count of individuals who have given their feedback for [Mike Jones] (teacherName)?
+#    - Could you please inform me how many people have rated [matt stone] (teacherName)?
+
+#- intent: Quality
+#  examples: |
+#    - what is the overall quality of  [matt stones] (teacherName) classes?
+#    - what is the quality of [Si Chen] (teacherName) classes?
   
-- intent: Difficulty
-  examples: |
-    - what is the overall Difficulty of [matt stones] (teacherName) classes?
-    - what is the Difficulty of [Si Chen] (teacherName) classes?
+#- intent: Difficulty
+#  examples: |
+#    - what is the overall Difficulty of [matt stones] (teacherName) classes?
+#    - what is the Difficulty of [Si Chen] (teacherName) classes?
 
-- intent: WTA
-  examples: |
-    - what is the WTA of [matt stones] (teacherName) classes?
-    - what is the WTA of [Si Chen] (teacherName) classes?
+#- intent: WTA
+#  examples: |
+#    - what is the WTA of [matt stones] (teacherName) classes?
+#    - what is the WTA of [Si Chen] (teacherName) classes?

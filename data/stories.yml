@@ -29,51 +29,60 @@ stories:
   - intent: deny
   - action: utter_goodbye
 
-- story: teacher_department
+- story: knowledge base happy path
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: teacher_Name
-  - action: action_teacher_Name
+  - intent: query_knowledge_base
+  - action: action_query_knowledge_base
+  - intent: goodbye
+  - action: utter_goodbye
 
-- story: teacher_Name
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: teacher_Name
-  - action: action_teacher_Name
+#- story: teacher_department
+# steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: teacher_Name
+#  - action: action_teacher_Name
 
-- story: Institution_Name
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: Institution_Name
-  - action: utter_Institution_Name
+#- story: teacher_Name
+ # steps:
+ # - intent: greet
+ # - action: utter_greet
+ # - intent: teacher_Name
+ # - action: action_teacher_Name
 
-- story: teacher_Number_of_Ratings
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: teacher_Name
-  - action: action_teacher_Name
+#- story: Institution_Name
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: Institution_Name
+#  - action: utter_Institution_Name
 
-- story: Quality
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: teacher_Name
-  - action: action_teacher_Name
+#- story: teacher_Number_of_Ratings
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: teacher_Name
+#  - action: action_teacher_Name
 
-- story: Difficulty
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: teacher_Name
-  - action: action_teacher_Name
+#- story: Quality
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: teacher_Name
+#  - action: action_teacher_Name
 
-- story: WTA
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: teacher_Name
-  - action: action_teacher_Name
+#- story: Difficulty
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: teacher_Name
+#  - action: action_teacher_Name
+
+#- story: WTA
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: teacher_Name
+#  - action: action_teacher_Name

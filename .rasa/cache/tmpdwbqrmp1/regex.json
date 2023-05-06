@@ -1,0 +1,6 @@
+[
+  {
+    "name": "teacherName",
+    "pattern": "(\\bSi\\ Chen\\b|\\bMatt\\ Stone\\b|\\bMike\\ Jones\\b|\\bJonh\\ Smith\\b|\\bLinh\\ Ngo\\b|\\bAliice\\ Cooper\\b)"
+  }
+]

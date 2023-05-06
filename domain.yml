@@ -8,23 +8,24 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
-  - teacher_department
-  - teacher_Name
-  - Institution_Name
-  - teacher_Number_of_Ratings
-  - Quality
-  - Difficulty
-  - WTA
+  - query_knowledge_base
 
 entities:
-  - teacherName
+  - object_type
 
 slots:
-  event:
-    type: text
+  object_type:
+    type: any
+    influence_conversation: false
     mappings:
     - type: from_entity
-      entity: teacherName
+      entity: object_type
+  attribute:
+    type: any
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: attribute
 
 responses:
   utter_greet:
@@ -48,9 +49,13 @@ responses:
 
   utter_Institution_Name:
   - text: "this bot exclusivly tracks teachers at west chester university"
+  
+  utter_ask_rephrase:
+  - text: "Sorry, I'm not sure I understand. Could you rephrase it?"
+  - text: "Could you please rephrase your message? I didn't quite get that."
+
 actions:
-  - action_teacher_Name
-  - action_teacher_department
+  - action_query_knowledge_base
 
 session_config:
   session_expiration_time: 60
