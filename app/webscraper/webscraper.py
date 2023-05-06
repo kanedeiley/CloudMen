@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import pandas as pd
 import json
 
-with open('/html_code.html', 'r') as file:
+with open('/html_code.html', 'rb') as file:
     html_code = file.read()
 
 soup = BeautifulSoup(html_code, "html.parser")
@@ -55,43 +55,21 @@ config = {
     'port': 3306,
     'database': 'profs'
 }
-
-# Create a connection to the MySQL database
+# create a connection to the database
 cnx = mysql.connector.connect(**config)
 
-# Create a cursor object
+# create a cursor
 cursor = cnx.cursor()
 
-# Define the SQL query to create a table
-create_table_query = '''
-CREATE TABLE teachers (
-  id INT NOT NULL AUTO_INCREMENT,
-  tdept VARCHAR(255),
-  institution_name VARCHAR(255),
-  tname VARCHAR(255),
-  tNumRatings INT,
-  Quality FLOAT,
-  Difficulty FLOAT,
-  would_take_again FLOAT,
-  PRIMARY KEY (id)
-)
-'''
+# iterate over the rows of the dataframe and insert each row into the professors table
+cursor.execute('CREATE TABLE IF NOT EXISTS profs (id INT NOT NULL AUTO_INCREMENT, tdept VARCHAR(255), institution_name VARCHAR(255), tname VARCHAR(255), tNumRatings VARCHAR(255), Quality VARCHAR(255), Difficulty VARCHAR(255), would_take_again VARCHAR(255), PRIMARY KEY (id))')
 
-# Execute the query to create the table
-cursor.execute(create_table_query)
-
-# Export the DataFrame to the MySQL table
+# Insert the DataFrame data into the table
 for _, row in df.iterrows():
-    add_teacher_query = '''
-    INSERT INTO teachers (tdept, institution_name, tname, tNumRatings, Quality, Difficulty, would_take_again)
-    VALUES (%s, %s, %s, %s, %s, %s, %s)
-    '''
-    data = (row['tdept'], row['institutiion_name'], row['tname'], row['tNumRatings'], row['Quality'], row['Difficulty'], row['would take again'])
-    cursor.execute(add_teacher_query, data)
+    query = 'INSERT INTO profs (tdept, institution_name, tname, tNumRatings, Quality, Difficulty, would_take_again) VALUES (%s, %s, %s, %s, %s, %s, %s)'
+    cursor.execute(query, tuple(row))
 
-# Commit the changes to the database
+# commit the changes and close the connection
 cnx.commit()
-
-# Close the connection and cursor objects
 cursor.close()
 cnx.close()
