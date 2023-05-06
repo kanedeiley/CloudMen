@@ -3,3 +3,4 @@ requests
 spacy  
 mysql-connector-python
 sqlalchemy 
+rasa-sdk
