@@ -29,18 +29,51 @@ stories:
   - intent: deny
   - action: utter_goodbye
 
-story: teacherName search
+- story: teacher_department
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: teacherName_search
-  - action: action_teacherName_search
+  - intent: teacher_Name
+  - action: action_teacher_Name
 
-- story: teacherName search query
+- story: teacher_Name
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: teacherName_search
-  - action: action_teacherName_search
-  - intent: teacher_query
-  - action: action_teacher_query
+  - intent: teacher_Name
+  - action: action_teacher_Name
+
+- story: Institution_Name
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: Institution_Name
+  - action: utter_Institution_Name
+
+- story: teacher_Number_of_Ratings
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: teacher_Name
+  - action: action_teacher_Name
+
+- story: Quality
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: teacher_Name
+  - action: action_teacher_Name
+
+- story: Difficulty
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: teacher_Name
+  - action: action_teacher_Name
+
+- story: WTA
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: teacher_Name
+  - action: action_teacher_Name

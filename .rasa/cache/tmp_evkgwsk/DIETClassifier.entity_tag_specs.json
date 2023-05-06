@@ -1,0 +1,20 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-teacherName",
+      "2": "I-teacherName",
+      "3": "L-teacherName",
+      "4": "U-teacherName",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-teacherName": 1,
+      "I-teacherName": 2,
+      "L-teacherName": 3,
+      "U-teacherName": 4,
+      "O": 0
+    },
+    "num_tags": 5
+  }
+]

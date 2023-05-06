@@ -8,6 +8,23 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - teacher_department
+  - teacher_Name
+  - Institution_Name
+  - teacher_Number_of_Ratings
+  - Quality
+  - Difficulty
+  - WTA
+
+entities:
+  - teacherName
+
+slots:
+  event:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: teacherName
 
 responses:
   utter_greet:
@@ -28,9 +45,12 @@ responses:
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
+
+  utter_Institution_Name:
+  - text: "this bot exclusivly tracks teachers at west chester university"
 actions:
-  - action_teacherName_search
-  - action_teacher_query
+  - action_teacher_Name
+  - action_teacher_department
 
 session_config:
   session_expiration_time: 60
