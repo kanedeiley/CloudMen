@@ -10,7 +10,7 @@ spec:
                 spec:
                         containers:
                                 - name: webscraper
-                                  image: dm929389/python:latest
+                                  image: kanedeiley/webscraper:latest
                                   ports:
                                           - containerPort: 5000
                         restartPolicy: OnFailure
