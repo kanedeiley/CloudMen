@@ -9,6 +9,7 @@ intents:
   - mood_unhappy
   - bot_challenge
   - query_knowledge_base
+  - Institution_Name
 
 entities:
   - object_type

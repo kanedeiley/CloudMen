@@ -90,6 +90,15 @@ nlu:
     - am I talking to a bot?
     - am I talking to a human?
 
+- intent: Institution_Name
+  examples: |
+    - Which university is [matt stone] (name) currently teaching at?
+    - May I know the name of the university where [Si Chen](name) teach?
+    - What is the name of the institution where [Mike Jones](name) is employed as a teacher?
+    - Could you tell me the name of the university where [Jonh Smith](name) holds a teaching position?
+    - Which university is [Aliice Cooper](name) affiliated with as a faculty member? 
+
+
 - intent: query_knowledge_base
   examples: |
     - what [teacher]{"entity": "object_type", "value": "teacher"} can you recommend?
@@ -98,10 +107,18 @@ nlu:
     - can you show me some [teacher]{"entity": "object_type", "value": "teacher"} options
     - What [department](tdept) is [Matt Stone](name) affiliated with?
     - do you have any [cs](tdept) [teachers]{"entity": "object_type", "value": "teacher"}?
-    - How many [ratings](tNumRatings) has [Aliice Cooper](name) received so far?\
+    - How many [ratings](tNumRatings) has [Aliice Cooper](name) received so far?
     - what is the overall [quality](Quality) of [matt stones] (name) classes?
     - what is the overall [Difficulty](Difficulty) of [matt stones] (name) classes?
     - what is the overall [WTA](WTA) of [matt stones] (name) classes?
+
+- lookup: teacher
+  examples: |
+      - matt stone
+      - Linh Ngo
+      - Si Chen
+      - Mike Jones
+      - Jonh Smith
 
 #- intent: teacher_department 
 #  examples: |
@@ -119,14 +136,6 @@ nlu:
 #    - May I know if [Aliice Cooper](teacherName) is a techer?
 #    - Could you please tell me if [Si Chen](teacherName) is a techer?
 #    - Excuse me, but  is [Jonh Smith](teacherName) a techer?
-
-#- intent: institution_Name
-#  examples: |
-#    - Which university is [matt stone] (teacherName) currently teaching at?
-#    - May I know the name of the university where [Si Chen](teacherName) teach?
-#    - What is the name of the institution where [Mike Jones](teacherName) is employed as a teacher?
-#    - Could you tell me the name of the university where [Jonh Smith](teacherName) holds a teaching position?
-#    - Which university is [Aliice Cooper](teacherName) affiliated with as a faculty member? 
 
 #- intent: teacher_Number_of_Ratings
 #  examples: |

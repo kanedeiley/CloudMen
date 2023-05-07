@@ -38,6 +38,13 @@ stories:
   - intent: goodbye
   - action: utter_goodbye
 
+- story: Institution_Name
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: Institution_Name
+  - action: utter_Institution_Name
+
 #- story: teacher_department
 # steps:
 #  - intent: greet
