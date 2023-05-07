@@ -96,7 +96,7 @@ nlu:
     - May I know the name of the university where [Si Chen](name) teach?
     - What is the name of the institution where [Mike Jones](name) is employed as a teacher?
     - Could you tell me the name of the university where [Jonh Smith](name) holds a teaching position?
-    - Which university is [Aliice Cooper](name) affiliated with as a faculty member? 
+    - Which university is [Alice Cooper](name) affiliated with as a faculty member? 
 
 
 - intent: query_knowledge_base
@@ -107,10 +107,14 @@ nlu:
     - can you show me some [teacher]{"entity": "object_type", "value": "teacher"} options
     - What [department](tdept) is [Matt Stone](name) affiliated with?
     - do you have any [cs](tdept) [teachers]{"entity": "object_type", "value": "teacher"}?
-    - How many [ratings](tNumRatings) has [Aliice Cooper](name) received so far?
+    - How many [ratings](tNumRatings) has [Alice Cooper](name) received so far?
+    - how many people have [rated](tNumRatings) [Mike Jones](name) received so far
     - what is the overall [quality](Quality) of [matt stones] (name) classes?
     - what is the overall [Difficulty](Difficulty) of [matt stones] (name) classes?
     - what is the overall [WTA](WTA) of [matt stones] (name) classes?
+    - what do people think the [quality](Quality) of [matt stones] (name) classes is?
+    - what do people think the [Difficulty](Difficulty) of [matt stones] (name) classes is?
+    - what do people think the [WTA](WTA) of [matt stones] (name) classes is?
 
 - lookup: teacher
   examples: |
