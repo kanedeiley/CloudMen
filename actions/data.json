@@ -1,7 +1,8 @@
 {
     "teacher": [
         {
-            "Stname": "matt stone",
+            "id": 0,
+            "name": "matt stone",
             "tdept": "CS",
             "institution_Name": "West Chester University",
             "tNumRatings": "3",
@@ -11,7 +12,8 @@
         },
 
         {
-            "Stname": "Linh Ngo",
+            "id": 1,
+            "name": "Linh Ngo",
             "tdept": "CS",
             "institution_Name": "West Chester University",
             "teacher_Number_of_Ratings": "3",

@@ -96,12 +96,12 @@ nlu:
     - list some [teachers]{"entity": "object_type", "value": "teacher"}
     - can you name some [teacher]{"entity": "object_type", "value": "teacher"} please?
     - can you show me some [teacher]{"entity": "object_type", "value": "teacher"} options
-    - What [department](tdept) is [Matt Stone](Stname) affiliated with?
+    - What [department](tdept) is [Matt Stone](name) affiliated with?
     - do you have any [cs](tdept) [teachers]{"entity": "object_type", "value": "teacher"}?
-    - How many [ratings](tNumRatings) has [Aliice Cooper](Stname) received so far?\
-    - what is the overall [quality](Quality) of [matt stones] (Stname) classes?
-    - what is the overall [Difficulty](Difficulty) of [matt stones] (Stname) classes?
-    - what is the overall [WTA](WTA) of [matt stones] (Stname) classes?
+    - How many [ratings](tNumRatings) has [Aliice Cooper](name) received so far?\
+    - what is the overall [quality](Quality) of [matt stones] (name) classes?
+    - what is the overall [Difficulty](Difficulty) of [matt stones] (name) classes?
+    - what is the overall [WTA](WTA) of [matt stones] (name) classes?
 
 #- intent: teacher_department 
 #  examples: |
