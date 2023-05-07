@@ -229,3 +229,287 @@
 2023-05-04 12:51:42,572 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
 2023-05-04 12:51:42,580 [INFO ]  Rasa server is up and running.
 2023-05-04 12:51:42,582 [INFO ]  Enabling coroutine debugging. Loop id 94445632374832.
+2023-05-06 23:52:11,697 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id:path>/messages     POST                           add_message
+/conversations/<conversation_id:path>/tracker/events POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id:path>/execute      POST                           execute_action
+/domain                                            GET                            get_domain
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id:path>/predict      POST                           predict
+/conversations/<conversation_id:path>/tracker/events PUT                            replace_events
+/conversations/<conversation_id:path>/story        GET                            retrieve_story
+/conversations/<conversation_id:path>/tracker      GET                            retrieve_tracker
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id:path>/trigger_intent POST                           trigger_intent
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2023-05-06 23:52:11,700 [INFO ]  Starting Rasa server on http://0.0.0.0:5005
+2023-05-06 23:52:11,701 [DEBUG]  Using the default number of Sanic workers (1).
+2023-05-06 23:52:14,400 [WARNI]  You are using an experimental feature: Action 'action_query_knowledge_base'!
+2023-05-06 23:52:14,685 [DEBUG]  Starting new HTTPS connection (1): api.segment.io:443
+2023-05-06 23:52:54,873 [DEBUG]  Skipping telemetry reporting: HTTPSConnectionPool(host='api.segment.io', port=443): Max retries exceeded with url: /v1/track (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7fb2f68add20>, 'Connection to api.segment.io timed out. (connect timeout=5)'))
+2023-05-06 23:52:54,913 [DEBUG]  Connected to InMemoryTrackerStore.
+2023-05-06 23:52:54,914 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2023-05-06 23:52:54,915 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2023-05-06 23:52:54,929 [INFO ]  Loading model /app/models/20230506-194653-intense-sash.tar.gz...
+2023-05-06 23:52:56,787 [DEBUG]  Extracted model to '/tmp/tmplmleuhyg'.
+2023-05-06 23:52:56,789 [WARNI]  You are using an experimental feature: Action 'action_query_knowledge_base'!
+2023-05-06 23:52:56,799 [ERROR]  Could not load model due to The model version is trained using Rasa Open Source 3.4.4 and is not compatible with your current installation which supports models build with Rasa Open Source 3.5.0 or higher. This means that you either need to retrain your model or revert back to the Rasa version that trained the model to ensure that the versions match up again..
+2023-05-06 23:52:56,800 [INFO ]  Rasa server is up and running.
+2023-05-06 23:52:56,803 [INFO ]  Enabling coroutine debugging. Loop id 94595182289312.
+2023-05-06 23:59:52,973 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id:path>/messages     POST                           add_message
+/conversations/<conversation_id:path>/tracker/events POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id:path>/execute      POST                           execute_action
+/domain                                            GET                            get_domain
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id:path>/predict      POST                           predict
+/conversations/<conversation_id:path>/tracker/events PUT                            replace_events
+/conversations/<conversation_id:path>/story        GET                            retrieve_story
+/conversations/<conversation_id:path>/tracker      GET                            retrieve_tracker
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id:path>/trigger_intent POST                           trigger_intent
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2023-05-06 23:59:52,976 [INFO ]  Starting Rasa server on http://0.0.0.0:5005
+2023-05-06 23:59:52,977 [DEBUG]  Using the default number of Sanic workers (1).
+2023-05-06 23:59:55,328 [WARNI]  You are using an experimental feature: Action 'action_query_knowledge_base'!
+2023-05-06 23:59:55,427 [DEBUG]  Starting new HTTPS connection (1): api.segment.io:443
+2023-05-07 00:00:35,495 [DEBUG]  Skipping telemetry reporting: HTTPSConnectionPool(host='api.segment.io', port=443): Max retries exceeded with url: /v1/track (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7fd428959ae0>, 'Connection to api.segment.io timed out. (connect timeout=5)'))
+2023-05-07 00:00:35,536 [DEBUG]  Connected to InMemoryTrackerStore.
+2023-05-07 00:00:35,537 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2023-05-07 00:00:35,538 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2023-05-07 00:00:35,553 [INFO ]  Loading model /app/models/20230506-194653-intense-sash.tar.gz...
+2023-05-07 00:00:37,435 [DEBUG]  Extracted model to '/tmp/tmpblcp5kdp'.
+2023-05-07 00:00:37,437 [WARNI]  You are using an experimental feature: Action 'action_query_knowledge_base'!
+2023-05-07 00:00:37,443 [ERROR]  Could not load model due to The model version is trained using Rasa Open Source 3.4.4 and is not compatible with your current installation which supports models build with Rasa Open Source 3.5.0 or higher. This means that you either need to retrain your model or revert back to the Rasa version that trained the model to ensure that the versions match up again..
+2023-05-07 00:00:37,443 [INFO ]  Rasa server is up and running.
+2023-05-07 00:00:37,445 [INFO ]  Enabling coroutine debugging. Loop id 94746450999536.
+2023-05-07 00:01:59,066 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id:path>/messages     POST                           add_message
+/conversations/<conversation_id:path>/tracker/events POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id:path>/execute      POST                           execute_action
+/domain                                            GET                            get_domain
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id:path>/predict      POST                           predict
+/conversations/<conversation_id:path>/tracker/events PUT                            replace_events
+/conversations/<conversation_id:path>/story        GET                            retrieve_story
+/conversations/<conversation_id:path>/tracker      GET                            retrieve_tracker
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id:path>/trigger_intent POST                           trigger_intent
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2023-05-07 00:01:59,070 [INFO ]  Starting Rasa server on http://0.0.0.0:5005
+2023-05-07 00:01:59,071 [DEBUG]  Using the default number of Sanic workers (1).
+2023-05-07 00:02:00,989 [WARNI]  You are using an experimental feature: Action 'action_query_knowledge_base'!
+2023-05-07 00:02:01,093 [DEBUG]  Starting new HTTPS connection (1): api.segment.io:443
+2023-05-07 00:02:41,252 [DEBUG]  Skipping telemetry reporting: HTTPSConnectionPool(host='api.segment.io', port=443): Max retries exceeded with url: /v1/track (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f8e8feadba0>, 'Connection to api.segment.io timed out. (connect timeout=5)'))
+2023-05-07 00:02:41,304 [DEBUG]  Connected to InMemoryTrackerStore.
+2023-05-07 00:02:41,305 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2023-05-07 00:02:41,306 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2023-05-07 00:02:41,319 [INFO ]  Loading model /app/models/20230506-200048-straight-surf.tar.gz...
+2023-05-07 00:02:43,454 [DEBUG]  Extracted model to '/tmp/tmp060yqqz9'.
+2023-05-07 00:02:43,456 [WARNI]  You are using an experimental feature: Action 'action_query_knowledge_base'!
+2023-05-07 00:02:43,463 [ERROR]  Could not load model due to The model version is trained using Rasa Open Source 3.4.4 and is not compatible with your current installation which supports models build with Rasa Open Source 3.5.0 or higher. This means that you either need to retrain your model or revert back to the Rasa version that trained the model to ensure that the versions match up again..
+2023-05-07 00:02:43,464 [INFO ]  Rasa server is up and running.
+2023-05-07 00:02:43,465 [INFO ]  Enabling coroutine debugging. Loop id 93913956309824.
+2023-05-07 00:03:09,827 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id:path>/messages     POST                           add_message
+/conversations/<conversation_id:path>/tracker/events POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id:path>/execute      POST                           execute_action
+/domain                                            GET                            get_domain
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id:path>/predict      POST                           predict
+/conversations/<conversation_id:path>/tracker/events PUT                            replace_events
+/conversations/<conversation_id:path>/story        GET                            retrieve_story
+/conversations/<conversation_id:path>/tracker      GET                            retrieve_tracker
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id:path>/trigger_intent POST                           trigger_intent
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2023-05-07 00:03:09,830 [INFO ]  Starting Rasa server on http://0.0.0.0:5005
+2023-05-07 00:03:09,832 [DEBUG]  Using the default number of Sanic workers (1).
+2023-05-07 00:03:11,767 [WARNI]  You are using an experimental feature: Action 'action_query_knowledge_base'!
+2023-05-07 00:03:11,865 [DEBUG]  Starting new HTTPS connection (1): api.segment.io:443
+2023-05-07 00:03:52,098 [DEBUG]  Skipping telemetry reporting: HTTPSConnectionPool(host='api.segment.io', port=443): Max retries exceeded with url: /v1/track (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f6ec48b9c00>, 'Connection to api.segment.io timed out. (connect timeout=5)'))
+2023-05-07 00:03:52,144 [DEBUG]  Connected to InMemoryTrackerStore.
+2023-05-07 00:03:52,145 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2023-05-07 00:03:52,146 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2023-05-07 00:03:52,158 [INFO ]  Loading model /app/models/20230506-200048-straight-surf.tar.gz...
+2023-05-07 00:03:53,923 [DEBUG]  Extracted model to '/tmp/tmp790evzo8'.
+2023-05-07 00:03:53,925 [WARNI]  You are using an experimental feature: Action 'action_query_knowledge_base'!
+2023-05-07 00:03:53,931 [ERROR]  Could not load model due to The model version is trained using Rasa Open Source 3.4.4 and is not compatible with your current installation which supports models build with Rasa Open Source 3.5.0 or higher. This means that you either need to retrain your model or revert back to the Rasa version that trained the model to ensure that the versions match up again..
+2023-05-07 00:03:53,932 [INFO ]  Rasa server is up and running.
+2023-05-07 00:03:53,933 [INFO ]  Enabling coroutine debugging. Loop id 94054990796576.
+2023-05-07 16:24:19,603 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id:path>/messages     POST                           add_message
+/conversations/<conversation_id:path>/tracker/events POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id:path>/execute      POST                           execute_action
+/domain                                            GET                            get_domain
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id:path>/predict      POST                           predict
+/conversations/<conversation_id:path>/tracker/events PUT                            replace_events
+/conversations/<conversation_id:path>/story        GET                            retrieve_story
+/conversations/<conversation_id:path>/tracker      GET                            retrieve_tracker
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id:path>/trigger_intent POST                           trigger_intent
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2023-05-07 16:24:19,606 [INFO ]  Starting Rasa server on http://0.0.0.0:5005
+2023-05-07 16:24:19,607 [DEBUG]  Using the default number of Sanic workers (1).
+2023-05-07 16:24:21,614 [WARNI]  You are using an experimental feature: Action 'action_query_knowledge_base'!
+2023-05-07 16:24:21,704 [DEBUG]  Starting new HTTPS connection (1): api.segment.io:443
+2023-05-07 16:24:21,710 [DEBUG]  Skipping telemetry reporting: HTTPSConnectionPool(host='api.segment.io', port=443): Max retries exceeded with url: /v1/track (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f0735bbdc30>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+2023-05-07 16:24:21,746 [DEBUG]  Connected to InMemoryTrackerStore.
+2023-05-07 16:24:21,747 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2023-05-07 16:24:21,747 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2023-05-07 16:24:21,764 [INFO ]  Loading model /app/models/20230506-200048-straight-surf.tar.gz...
+2023-05-07 16:24:23,780 [DEBUG]  Extracted model to '/tmp/tmp0kmlm3at'.
+2023-05-07 16:24:23,781 [WARNI]  You are using an experimental feature: Action 'action_query_knowledge_base'!
+2023-05-07 16:24:23,788 [ERROR]  Could not load model due to The model version is trained using Rasa Open Source 3.4.4 and is not compatible with your current installation which supports models build with Rasa Open Source 3.5.0 or higher. This means that you either need to retrain your model or revert back to the Rasa version that trained the model to ensure that the versions match up again..
+2023-05-07 16:24:23,789 [INFO ]  Rasa server is up and running.
+2023-05-07 16:24:23,790 [INFO ]  Enabling coroutine debugging. Loop id 94567729632304.
+2023-05-07 16:46:30,532 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id:path>/messages     POST                           add_message
+/conversations/<conversation_id:path>/tracker/events POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id:path>/execute      POST                           execute_action
+/domain                                            GET                            get_domain
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id:path>/predict      POST                           predict
+/conversations/<conversation_id:path>/tracker/events PUT                            replace_events
+/conversations/<conversation_id:path>/story        GET                            retrieve_story
+/conversations/<conversation_id:path>/tracker      GET                            retrieve_tracker
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id:path>/trigger_intent POST                           trigger_intent
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2023-05-07 16:46:30,534 [INFO ]  Starting Rasa server on http://0.0.0.0:5005
+2023-05-07 16:46:30,535 [DEBUG]  Using the default number of Sanic workers (1).
+2023-05-07 16:46:33,305 [WARNI]  You are using an experimental feature: Action 'action_query_knowledge_base'!
+2023-05-07 16:46:33,473 [DEBUG]  Starting new HTTPS connection (1): api.segment.io:443
+2023-05-07 16:46:53,840 [DEBUG]  Skipping telemetry reporting: HTTPSConnectionPool(host='api.segment.io', port=443): Max retries exceeded with url: /v1/track (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7fafecc55c60>, 'Connection to api.segment.io timed out. (connect timeout=5)'))
+2023-05-07 16:46:54,084 [DEBUG]  Connected to InMemoryTrackerStore.
+2023-05-07 16:46:54,091 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2023-05-07 16:46:54,092 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2023-05-07 16:46:54,157 [INFO ]  Loading model /app/models/20230506-200048-straight-surf.tar.gz...
+2023-05-07 16:46:58,283 [DEBUG]  Extracted model to '/tmp/tmpjoo0q92u'.
+2023-05-07 16:46:58,285 [WARNI]  You are using an experimental feature: Action 'action_query_knowledge_base'!
+2023-05-07 16:46:58,291 [ERROR]  Could not load model due to The model version is trained using Rasa Open Source 3.4.4 and is not compatible with your current installation which supports models build with Rasa Open Source 3.5.0 or higher. This means that you either need to retrain your model or revert back to the Rasa version that trained the model to ensure that the versions match up again..
+2023-05-07 16:46:58,292 [INFO ]  Rasa server is up and running.
+2023-05-07 16:46:58,294 [INFO ]  Enabling coroutine debugging. Loop id 94154361312224.
+2023-05-07 17:30:56,854 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id:path>/messages     POST                           add_message
+/conversations/<conversation_id:path>/tracker/events POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id:path>/execute      POST                           execute_action
+/domain                                            GET                            get_domain
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id:path>/predict      POST                           predict
+/conversations/<conversation_id:path>/tracker/events PUT                            replace_events
+/conversations/<conversation_id:path>/story        GET                            retrieve_story
+/conversations/<conversation_id:path>/tracker      GET                            retrieve_tracker
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id:path>/trigger_intent POST                           trigger_intent
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2023-05-07 17:30:56,857 [INFO ]  Starting Rasa server on http://0.0.0.0:5005
+2023-05-07 17:30:56,858 [DEBUG]  Using the default number of Sanic workers (1).
+2023-05-07 17:30:58,954 [WARNI]  You are using an experimental feature: Action 'action_query_knowledge_base'!
+2023-05-07 17:30:59,040 [DEBUG]  Starting new HTTPS connection (1): api.segment.io:443
+2023-05-07 18:06:53,734 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id:path>/messages     POST                           add_message
+/conversations/<conversation_id:path>/tracker/events POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id:path>/execute      POST                           execute_action
+/domain                                            GET                            get_domain
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id:path>/predict      POST                           predict
+/conversations/<conversation_id:path>/tracker/events PUT                            replace_events
+/conversations/<conversation_id:path>/story        GET                            retrieve_story
+/conversations/<conversation_id:path>/tracker      GET                            retrieve_tracker
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id:path>/trigger_intent POST                           trigger_intent
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2023-05-07 18:06:53,737 [INFO ]  Starting Rasa server on http://0.0.0.0:5005
+2023-05-07 18:06:53,738 [DEBUG]  Using the default number of Sanic workers (1).
+2023-05-07 18:06:56,291 [WARNI]  You are using an experimental feature: Action 'action_query_knowledge_base'!
+2023-05-07 18:06:56,407 [DEBUG]  Starting new HTTPS connection (1): api.segment.io:443
