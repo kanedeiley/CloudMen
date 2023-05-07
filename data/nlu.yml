@@ -108,7 +108,7 @@ nlu:
     - What [department](tdept) is [Matt Stone](name) affiliated with?
     - do you have any [cs](tdept) [teachers]{"entity": "object_type", "value": "teacher"}?
     - How many [ratings](tNumRatings) has [Alice Cooper](name) received so far?
-    - how many people have [rated](tNumRatings) [Mike Jones](name) received so far
+    - how many people have [rated](tNumRatings) [Mike Jones](name) so far?
     - what is the overall [quality](Quality) of [matt stones] (name) classes?
     - what is the overall [Difficulty](Difficulty) of [matt stones] (name) classes?
     - what is the overall [WTA](WTA) of [matt stones] (name) classes?
