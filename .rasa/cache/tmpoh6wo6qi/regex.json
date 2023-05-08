@@ -1,0 +1,6 @@
+[
+  {
+    "name": "tSid",
+    "pattern": "(\\bmatt\\ stone\\b|\\bLinh\\ Ngo\\b|\\bSi\\ Chen\\b|\\bMike\\ Jones\\b|\\bJonh\\ Smith\\b)"
+  }
+]

@@ -1,0 +1,9 @@
+version: "3.1"
+nlu:
+  - lookup: tSid
+    examples: |
+       - matt stone
+       - Linh Ngo
+       - Si Chen
+       - Mike Jones
+       - Jonh Smith

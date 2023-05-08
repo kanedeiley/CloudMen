@@ -8,75 +8,26 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
-  - query_knowledge_base
   - Institution_Name
-
-entities:
-  - object_type
-  - mention
-  - attribute
-  - tdept
-  - tNumRatings
+  - teacher_department
+  - teacher_Name
+  - teacher_Number_of_Ratings
   - Quality
   - Difficulty
   - WTA
+ #- query_knowledge_base
+
+entities:
+  - tSid
 
 slots:
-  object_type:
-    type: any
-    influence_conversation: false
-    mappings:
-    - type: from_entity
-      entity: object_type
-  attribute:
-    type: any
-    influence_conversation: false
-    mappings:
-    - type: from_entity
-      entity: attribute
-  mention:
+  tSid:
     type: text
     influence_conversation: false
     mappings:
     - type: from_entity
-      entity: mention
-  teacher:
-    type: text
-    influence_conversation: false
-    mappings:
-    - type: from_entity
-      entity: teacher
-  tdept:
-    type: text
-    influence_conversation: false
-    mappings:
-    - type: from_entity
-      entity: tdept
-  tNumRatings:
-    type: text
-    influence_conversation: false
-    mappings:
-    - type: from_entity
-      entity: tNumRatings
-  Quality:
-    type: text
-    influence_conversation: false
-    mappings:
-    - type: from_entity
-      entity: Quality
-  Difficulty:
-    type: text
-    influence_conversation: false
-    mappings:
-    - type: from_entity
-      entity: Difficulty
-  WTA:
-    type: text
-    influence_conversation: false
-    mappings:
-    - type: from_entity
-      entity: WTA
-  
+      entity: tSid
+
 
 
 responses:
@@ -107,7 +58,13 @@ responses:
   - text: "Could you please rephrase your message? I didn't quite get that."
 
 actions:
-  - action_query_knowledge_base
+  - action_teacher_tdept
+  - action_teacher_tNumRatings
+  - action_teacher_Quality
+  - action_teacher_Difficulty
+  - action_teacher_WTA
+  - action_teacher_Name
+
 
 session_config:
   session_expiration_time: 60
