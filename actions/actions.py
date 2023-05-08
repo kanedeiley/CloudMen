@@ -14,6 +14,8 @@ import mysql.connector
     
 class action_teacher_tdept(Action):
 
+    def name(self) -> Text: return "action_teacher_tdept"
+
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
@@ -36,6 +38,8 @@ class action_teacher_tdept(Action):
     
 class action_teacher_tNumRatings(Action):
 
+    def name(self) -> Text: return "action_teacher_tNumRatings"
+    
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
@@ -57,6 +61,8 @@ class action_teacher_tNumRatings(Action):
         return []
 
 class action_teacher_Quality(Action):
+
+    def name(self) -> Text: return "action_teacher_Quality"
 
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
@@ -80,6 +86,7 @@ class action_teacher_Quality(Action):
     
 class action_teacher_Difficulty(Action):
 
+    def name(self) -> Text: return "action_teacher_Difficulty"
 
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
@@ -103,6 +110,8 @@ class action_teacher_Difficulty(Action):
 
 class action_teacher_WTA(Action):
 
+    def name(self) -> Text: return "action_teacher_WTA"
+
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
@@ -125,6 +134,8 @@ class action_teacher_WTA(Action):
     
 class action_teacher_WTA(Action):
 
+    def name(self) -> Text: return "action_teacher_WTA"
+
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
@@ -144,6 +155,8 @@ class action_teacher_WTA(Action):
         return []
     
 class action_teacher_Name(Action):
+
+    def name(self) -> Text: return "action_teacher_Name"
 
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
