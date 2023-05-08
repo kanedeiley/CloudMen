@@ -14,7 +14,7 @@
             "id": 1,
             "name": "Linh Ngo",
             "tdept": "CS",
-            "teacher_Number_of_Ratings": "3",
+            "tNumRatings": "3",
             "Quality": "3",
             "Difficulty": "3",
             "WTA": "3"

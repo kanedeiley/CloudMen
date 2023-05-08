@@ -13,6 +13,13 @@ intents:
 
 entities:
   - object_type
+  - mention
+  - attribute
+  - tdept
+  - tNumRatings
+  - Quality
+  - Difficulty
+  - WTA
 
 slots:
   object_type:
@@ -27,6 +34,50 @@ slots:
     mappings:
     - type: from_entity
       entity: attribute
+  mention:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: mention
+  teacher:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: teacher
+  tdept:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: tdept
+  tNumRatings:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: tNumRatings
+  Quality:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: Quality
+  Difficulty:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: Difficulty
+  WTA:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: WTA
+  
+
 
 responses:
   utter_greet:
