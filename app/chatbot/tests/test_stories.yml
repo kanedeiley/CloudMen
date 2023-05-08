@@ -1,0 +1,81 @@
+#### This file contains tests to evaluate that your bot behaves as expected.
+#### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
+
+stories:
+- story: prof query 1
+  steps:
+  - user: |
+      hi
+    intent: greet
+  - action: utter_greet
+  - user: |
+      i need help finding professors
+    intent: prof_search
+  - action: action_prof_search
+  - user: |
+      tell me more about [Linh Ngo]{"entity": "profs"}
+    intent: prof_query
+  - action: action_prof_query
+
+- story: prof query 2
+  steps:
+  - user: |
+      tell me about [Richard Burns]{"entity": "profs"}
+    intent: prof_query
+  - action: action_prof_query
+
+- story: prof query 3
+  steps:
+  - user: |
+      howdy
+    intent: greet
+  - action: utter_greet
+  - user: |
+      tell me about some professors
+    intent: prof_search
+  - action: action_prof_search
+  - user: |
+      who is [Jongwoong Kim]{"entity": "profs"}
+    intent: prof_query
+  - action: action_prof_query
+
+- story: prof query 4
+  steps:
+  - user: |
+      list some professors
+    intent: prof_search
+  - action: action_prof_search
+  - user: |
+      describe [Li Liu]{"entity": "profs"}
+    intent: prof_query
+  - action: prof_event_query
+
+- story: prof query 5
+  steps:
+  - user: |
+      hello
+    intent: greet
+  - action: utter_greet
+  - user: |
+      can you tell me more about [Vanessa Johnson]{"entity": "profs"}
+    intent: prof_query
+  - action: action_prof_query
+
+- story: prof query 6
+  steps:
+  - user: |
+      hi
+    intent: greet
+  - action: utter_greet
+  - user: |
+      tell me more about [David Jones]{"entity": "profs"}
+    intent: prof_query
+  - action: action_prof_query
+  - user: |
+      who are some professors
+    intent: prof_search
+  - action: action_prof_search
+  - user: |
+      [Danielle Chirdon]{"entity": "profs"} sounds fun
+    intent: prof_query
+  - action: action_prof_query

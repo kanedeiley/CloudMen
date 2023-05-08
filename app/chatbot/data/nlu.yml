@@ -1,0 +1,127 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: prof_search
+  examples: |
+          - can you help me name some professors
+          - name some professors
+          - help find professors 
+          - WCU professors
+          - name a few professors
+          - who are some professors
+          - any professors you can name
+          - what are some professor names
+          - give me a list of professors
+          - tell me what professors WCU has
+          - help name professors
+          - list a few professors
+          - list me prfoessors
+          - name me some professors
+          - which professors are there
+          - professors names
+
+- intent: event_query
+  examples: |
+          - tell me more about [Linh Ngo](profs)
+          - who is [Stephen Richter](profs)
+          - how is [Li Lu](profs)
+          - do you know [Vanessa Johnson](profs)
+          - what do you know about [Alicia Benjiman](profs)
+          - [Jongwoong Kim](profs) sounds interesting
+          - i would like to know more about [Mark Yang](profs)
+          - [Jeremy McGirl](profs)
+          - could you tell me more about [Danielle Chirdon](profs)
+          - tell me about [Nina Pulliam](profs)
+          - i need to know more about [David Jones](profs)
+          - tell me more about [Selen Razon](profs)
+          - what do you know about [Afrand Agah](profs)
+          - can i learn more about [Richard Burns](profs)
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?

@@ -1,0 +1,53 @@
+version: "3.1"
+nlu:
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?
+
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - good morning
+      - good evening
+      - hey there
+
+  - intent: goodbye
+    examples: |
+      - bye
+      - goodbye
+      - see you around
+      - see you later
+
+  - intent: query_knowledge_base
+    examples: |
+      - what [professors]{"entity": "object_type", "value": "teachers"} can you recommend?
+      - list some [professors]{"entity": "object_type", "value": "teachers"}
+      - can you name some [professors]{"entity": "object_type", "value": "teachers"} please?
+      - can you show me some [professor]{"entity": "object_type", "value": "teachers"} options
+      - list [Computer Science]{"entity": "tdept"} [professors]{"entity": "object_type", "value": "teachers"}
+      - do you have any [Science]{"entity": "tdept"} [professors]{"entity": "object_type", "value": "teachers"}?
+      - do you know the [Quality]{"entity": "attribute", "value": "Quality"} of [that one]{"entity": "mention"}?
+      - what [department]{"entity": "attribute"} is [Linh Ngo]{"entity": "teachers"}?
+      - do you how many [ratings]{"entity": "tNumRatings"} the [last one]{"entity": "mention", "value": "LAST"} has?
+      - What is [David Dehm]{"entity": "teachers"} [would take again]{"entity": "attribute", "value": "would_take_again"}?
+      - what is the [Difficulty]{"entity": "attribute", "value": "Difficulty"} of [Matt Stone]{"entity": "teachers"}?
+      - what is with [Si Chen]{"entity": "teachers"}?
+      - Do you also have any [Writing]{"entity": "tdept"} [professors]{"entity": "object_type", "value": "teachers"}?
+      - What about any [Fine Arts]{"entity": "tdept", "value": "Fine Arts"} [professors]{"entity": "object_type", "value": "teachers"}?
+      - Do you also know some [Geography]{"entity": "tdept"} [professors]{"entity": "object_type", "value": "teachers"}?
+      - can you tell me the [Quality]{"entity": "attribute", "value": "Quality"} of [that professor]{"entity": "mention"}?
+      - what [Difficulty]{"entity": "attribute"} do [they]{"entity": "mention"} have?
+
+  - lookup: teachers
+    examples: |
+      - Matt Stone
+      - Linh Ngo
+      - Si Chen
+      - David Dehm
+      - Dylan Neary
+      - Andrew Snyder

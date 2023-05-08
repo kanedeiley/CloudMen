@@ -1,0 +1,58 @@
+version: "3.1"
+
+stories:
+
+- story: prof search
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: prof_search
+  - action: action_prof_search
+
+- story: prof search query
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: prof_search
+  - action: action_prof_search
+  - intent: prof_query
+  - action: action_prof_query
+
+- story: prof query
+  steps: 
+  - intent: prof_query
+  - action: action_prof_query
+
+- story: greet query
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: prof_query
+  - action: action_prof_query
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye

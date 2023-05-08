@@ -1,0 +1,111 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - query_knowledge_base
+  - bot_challenge
+
+entities:
+  - object_type
+  - mention
+  - attribute
+  - teachers
+  - tdept
+  - institution_name 
+  - tname
+  - tNumRatings
+  - Quality
+  - Difficulty
+  - would_take_again
+
+slots:
+  object_type:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: object_type
+  mention:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: mention
+  attribute:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: attribute
+  teachers:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: teachers
+  tdept:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: tdept
+  institution_name:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: institution_name
+  tname:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: tname
+  tNumRatings:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: tNumRatings
+  Quality:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: Quality
+  Difficulty:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: Difficulty
+  would_take_again:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: would_take_again
+actions:
+- action_query_knowledge_base
+
+responses:
+  utter_greet:
+  - text: "Hey!"
+  - text: "Hello! How can I help you?"
+
+  utter_goodbye:
+  - text: "Bye"
+  - text: "Goodbye. See you soon."
+
+  utter_ask_rephrase:
+  - text: "Sorry, I'm not sure I understand. Can you rephrase?"
+  - text: "Can you please rephrase? I did not got that."
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+
+session_config:
+  session_expiration_time: 60  # value in minutes
+  carry_over_slots_to_new_session: true

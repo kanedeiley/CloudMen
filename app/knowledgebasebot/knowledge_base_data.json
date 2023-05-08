@@ -1,0 +1,58 @@
+{
+     "teachers": [
+        {
+                "tdept" : "Computer Science"
+                "institutiion_name" : "West Chester University of Pennsylvannia",
+                "tname": "Si Chen"
+                "tNumRatings" : "12",
+                "Quality" : "5",
+                "Difficulty" : "3.8",
+                "would_take_again" : "60%"
+        },
+        {
+                "tdept" : "Computer Science"
+                "institutiion_name" : "West Chester University of Pennsylvannia",
+                "tname": "Linh Ngo"
+                "tNumRatings" : "12",
+                "Quality" : "5",
+                "Difficulty" : "3.8",
+                "would_take_again" : "60%"
+        },
+        {
+                "tdept" : "Writing"
+                "institutiion_name" : "West Chester University of Pennsylvannia",
+                "tname": "Dylan Neary"
+                "tNumRatings" : "12",
+                "Quality" : "5",
+                "Difficulty" : "3.8",
+                "would_take_again" : "60%"
+        },
+        {
+                "tdept" : "Fine Arts"
+                "institutiion_name" : "West Chester University of Pennsylvannia",
+                "tname": "David Dehm"
+                "tNumRatings" : "12",
+                "Quality" : "5",
+                "Difficulty" : "3.8",
+                "would_take_again" : "60%"
+        },
+        {
+                "tdept" : "Geography"
+                "institutiion_name" : "West Chester University of Pennsylvannia",
+                "tname": "Andrew Snyder"
+                "tNumRatings" : "12",
+                "Quality" : "5",
+                "Difficulty" : "3.8",
+                "would_take_again" : "60%"
+        },
+        {
+                "tdept" : "Science"
+                "institutiion_name" : "West Chester University of Pennsylvannia",
+                "tname": "Matt Stone"
+                "tNumRatings" : "12",
+                "Quality" : "5",
+                "Difficulty" : "3.8",
+                "would_take_again" : "60%"
+        }
+]
+}
