@@ -1,0 +1,44 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-attribute",
+      "2": "I-attribute",
+      "3": "L-attribute",
+      "4": "U-attribute",
+      "5": "B-department",
+      "6": "I-department",
+      "7": "L-department",
+      "8": "U-department",
+      "9": "B-object_type",
+      "10": "I-object_type",
+      "11": "L-object_type",
+      "12": "U-object_type",
+      "13": "B-teacher",
+      "14": "I-teacher",
+      "15": "L-teacher",
+      "16": "U-teacher",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-attribute": 1,
+      "I-attribute": 2,
+      "L-attribute": 3,
+      "U-attribute": 4,
+      "B-department": 5,
+      "I-department": 6,
+      "L-department": 7,
+      "U-department": 8,
+      "B-object_type": 9,
+      "I-object_type": 10,
+      "L-object_type": 11,
+      "U-object_type": 12,
+      "B-teacher": 13,
+      "I-teacher": 14,
+      "L-teacher": 15,
+      "U-teacher": 16,
+      "O": 0
+    },
+    "num_tags": 17
+  }
+]
