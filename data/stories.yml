@@ -38,6 +38,11 @@ stories:
   - intent: goodbye
   - action: utter_goodbye
 
+- story: knowledge base q
+  steps:
+  - intent: query_knowledge_base
+  - action: action_query_knowledge_base
+
 - story: Institution_Name
   steps:
   - intent: greet
