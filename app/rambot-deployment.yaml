@@ -10,7 +10,7 @@ spec:
                 spec:
                         containers:
                                 - name: webscraper
-                                  image: dm929389/python:latest
+                                  image: kanedeiley/webscraper:latest
                                   ports:
                                           - containerPort: 5000
                         restartPolicy: OnFailure
@@ -51,3 +51,27 @@ spec:
                                 - name: mysql-persistent-storage
                                   persistentVolumeClaim:
                                           claimName: mysql-pvc
+---                                          
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+        name: chatbot
+spec:
+        replicas: 1
+        selector:
+                matchLabels:
+                        app: chatbot
+        template:
+                metadata:
+                        labels:
+                                app: chatbot
+                spec:
+                        containers:
+                                - name: chatbot-rasa
+                                  image: kanedeiley/rasa:latest
+                                  ports:
+                                          - containerPort: 5005
+                                - name: chatbot-actions
+                                  image: kanedeiley/rasa-actions:latest
+                                  ports:
+                                          - containerPort: 5055
