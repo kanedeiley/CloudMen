@@ -13,6 +13,6 @@ rules:
   - action: utter_iamabot
 
 - rule: query knowledge base
-    steps:
+  steps:
       - intent: query_knowledge_base
       - action: action_query_knowledge_base

@@ -1,0 +1,8 @@
+{
+  "teachers": "teacher",
+  "department": "tdept",
+  "cs": "tdept",
+  "ratings": "tNumRatings",
+  "rated": "tNumRatings",
+  "quality": "Quality"
+}

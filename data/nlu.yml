@@ -92,11 +92,11 @@ nlu:
 
 - intent: Institution_Name
   examples: |
-    - Which university is [matt stone] {"entity": "teacher"} currently teaching at?
-    - May I know the name of the university where [Si Chen]{"entity": "teacher"} teach?
-    - What is the name of the institution where [Mike Jones]{"entity": "teacher"} is employed as a teacher?
-    - Could you tell me the name of the university where [Jonh Smith]{"entity": "teacher"} holds a teaching position?
-    - Which university is [Alice Cooper]{"entity": "teacher"} affiliated with as a faculty member? 
+    - Which university is [matt stone](teacher) currently teaching at?
+    - May I know the name of the university where [Si Chen](teacher) teach?
+    - What is the name of the institution where [Mike Jones](teacher) is employed as a teacher?
+    - Could you tell me the name of the university where [Jonh Smith](teacher) holds a teaching position?
+    - Which university is [Alice Cooper](teacher) affiliated with as a faculty member? 
 
 
 - intent: query_knowledge_base
@@ -105,16 +105,16 @@ nlu:
     - list some [teachers]{"entity": "object_type", "value": "teacher"}
     - can you name some [teacher]{"entity": "object_type", "value": "teacher"} please?
     - can you show me some [teacher]{"entity": "object_type", "value": "teacher"} options
-    - What [department]{"entity": "attribute", "value": "tdept"} is [Matt Stone]{"entity": "teacher"}  affiliated with?
-    - do you have any [cs]{"entity": "attribute", "value": "tdept"}  [teachers]{"entity": "object_type", "value": "teacher"}?
-    - How many [ratings]{"entity": "attribute", "value": "tNumRatings"} has [Alice Cooper]{"entity": "teacher"} received so far?
-    - how many people have [rated]{"entity": "attribute", "value": "tNumRatings"} [Mike Jones]{"entity": "teacher"} so far?
-    - what is the overall [quality]{"entity": "attribute", "value": "Quality"} of [matt stones]{"entity": "teacher"} classes?
-    - what is the overall [Difficulty]{"entity": "attribute", "value": "Difficulty"} of [Linh Ngo]{"entity": "teacher"} classes?
-    - what is the overall [WTA]{"entity": "attribute", "value": "WTA"} of [matt stones]{"entity": "teacher"} classes?
-    - what do people think the [quality]{"entity": "attribute", "value": "Quality"} of [Linh Ngo]{"entity": "teacher"} classes is?
-    - what do people think the [Difficulty]{"entity": "attribute", "value": "Difficulty"} of [matt stones]{"entity": "teacher"} classes is?
-    - what do people think the [WTA]{"entity": "attribute", "value": "WTA"} of [Linh Ngo]{"entity": "teacher"} classes is?
+    - What [department](tdept) is [Matt Stone]{"entity": "teacher"}  affiliated with?
+    - do you have any [cs](tdept)  [teachers]{"entity": "object_type", "value": "teacher"}?
+    - How many [ratings](tNumRatings) has [Alice Cooper](teacher) received so far?
+    - how many people have [rated](tNumRatings) [Mike Jones](teacher) so far?
+    - what is the overall [quality](quality) of [matt stones](teacher) classes?
+    - what is the overall [Difficulty](Difficulty) of [Linh Ngo](teacher) classes?
+    - what is the overall [WTA](WTA) of [matt stones](teacher) classes?
+    - what do people think the [quality](quality) of [Linh Ngo](teacher) classes is?
+    - what do people think the [Difficulty](Difficulty) of [matt stones](teacher) classes is?
+    - what do people think the [WTA](WTA) of [Linh Ngo](teacher) classes is?
 
 - lookup: teacher
   examples: |

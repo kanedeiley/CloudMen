@@ -8,5 +8,6 @@ from rasa_sdk.knowledge_base.actions import ActionQueryKnowledgeBase
 class action_query_knowledge_base(ActionQueryKnowledgeBase):
     def __init__(self):
         knowledge_base = InMemoryKnowledgeBase("data.json")
+
         super().__init__(knowledge_base)
                  
