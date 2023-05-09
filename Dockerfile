@@ -1,11 +1,19 @@
-# Use the base image that you pushed to your Docker repository
-FROM pm926048/csc468.cloud:tagname
+FROM node:lastest
 
-# Set the working directory to the root directory of your app
+# set working directory
 WORKDIR /app
 
-# Copy the files from your local directory to the container
-COPY . .
+# add `/app/node_modules/.bin` to $PATH
+ENV PATH /app/node_modules/.bin:$PATH
 
-# Specify the command that should be run when the container starts
-CMD [ "npm", "start" ]
+# install app dependencies
+COPY package.json ./
+COPY package-lock.json ./
+RUN npm install --silent
+RUN npm install react-scripts@3.4.1 -g --silent
+
+# add app
+COPY . ./
+
+# start app
+CMD ["npm", "start"]
