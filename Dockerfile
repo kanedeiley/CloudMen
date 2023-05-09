@@ -1,4 +1,4 @@
-FROM node:lastest
+FROM node:latest
 
 # set working directory
 WORKDIR /webui
