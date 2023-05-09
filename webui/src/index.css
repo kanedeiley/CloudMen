@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+*, ::after, ::before{
+  background-color: #66369d;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.text{          /* this is the text box at the bottom next to the send */      
+  width: 100%;
+  height:85%;
+  font-size: 1em; /* adjust font size as needed */
+  background-color: #cdc7d9;
+  border-color: transparent;
+  border-radius: 5px;
+}
+
+.form{
+  display: inline-block;
+  width:90%;
+  height:5vh;
+  position: absolute;
+  bottom:5vh;
+  left:5vw
+}
+.chatbot-messages {
+  position: absolute;
+  display:block;
+  top: 23vh;
+  left: 6vw;
+  width: 94%;
+  height:62vh;
+  margin-bottom: 10vh;
+  margin-top: 5vh;
+  overflow-y: auto;
+}
+
+
+.message {
+  display:block;
+  border: 2px solid #f3be6a;
+  padding-bottom: 1.5vh;
+  padding-top: 1.5vh;
+  border-radius:50px;
+  margin-bottom: 1vh;
+  padding-left: 5vw;
+  margin-right:5vw;
+  overflow-wrap: break-word;
+}
+.App-header {
+  background-color: #66369d;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(16px + 1vmin);
+  color:#f3be6a;
+}
+.logo{
+  display: inline-flex;
+  width:300px;
+  height:23vh;
+  position:absolute;
+  top:3vh;
+}
+h1{
+  margin-left: 35px;
+}
