@@ -1,19 +1,25 @@
 import React, { useState } from 'react';
 import './index.css';
-import response from './response.json';
 
 function App() {
   const [messages, setMessages] = useState([]);
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     const input = event.target.elements.message.value.trim();
   
     if (input === "/clear") {
       setMessages([]);
     } else {
-      const chatbotResponse = response[input] || "I don't understand. Please try again.";
-      setMessages([...messages, `[User]: ${input}`, `[Bot]: ${chatbotResponse}`]);
+      const requestOptions = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: input })
+      };
+      const responseData = await fetch('http://localhost:5005/webhooks/rest/webhook', requestOptions);
+      const chatbotResponse = await responseData.json();
+      const responseText = chatbotResponse[0].text || "I don't understand. Please try again.";
+      setMessages([...messages, `[User]: ${input}`, `[Bot]: ${responseText}`]);
     }
     event.target.elements.message.value = '';
   };
