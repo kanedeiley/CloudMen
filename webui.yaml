@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: my-react-app
-        image: pm926048/my-react-app:v1
+        image: ridhazaki/my-react-app:1.0
         ports:
         - containerPort: 80
