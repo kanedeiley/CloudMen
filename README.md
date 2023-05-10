@@ -11,6 +11,7 @@ The West Chester University RAMBOT was constructued with the intention of provid
 ### Chatbot, Web-UI, Webscraper, Database
 - Contained testing environments for each component
 
+
 ## Usage
 - Git clone the main repository
 - cd into the app folder
